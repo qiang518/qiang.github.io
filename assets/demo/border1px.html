@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!-- 
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.0 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+        Hexo
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="huangwenqiang">
+    <meta name="description" content="null">
+    <meta name="keywords" content="null">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hexo">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://qiang518.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Hexo">
+    <meta property="og:description" content="null">
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/queue.js"></script>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>huangwenqiang</strong>
+        <span>3月 31, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://qiang518.github.io//assets/demo/border1px.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=http://qiang518.github.io//assets/demo/border1px.html&via=huangwenqiang" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://qiang518.github.io//assets/demo/border1px.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://qiang518.github.io//assets/demo/border1px.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+    <title>日语50音</title>
+    <style type="text/css">
+    /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,menu{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}html,body{-webkit-text-size-adjust:none;-webkit-touch-callout:none;vertical-align:middle;font-size:16px;background:#e6e6e6;position:relative;height:100%;font-family:Tahoma,Arial,"Microsoft Yahei",sans-serif}.clearfix:after{content:" ";display:block;clear:both;visibility:hidden;line-height:0;height:0}input::-webkit-input-placeholder{color:#aaa}a,div{-webkit-tap-highlight-color:rgba(0,0,0,0)}a,a:active,a:hover{color:#0057af;text-decoration:none}header,.header{width:215px;height:58px;background:url(http://3.url.cn/qun/create_iphone/img/sprite.png) no-repeat transparent 0 0;color:#fff;line-height:58px;padding-left:64px;font-size:24px;-webkit-transform:scale(0.82) scale(0.82);-webkit-transform-origin:0 50%}.input-group{overflow:hidden;vertical-align:middle;line-height:16px;background-color:#fff;}#main-section{position:relative;height:100%;min-height:370px;overflow:hidden;}.input-group label{width:100px;padding:10px 0 10px 12px;display:inline-block;border-right:0;float:left;color:gray;-webkit-appearance:none;height:24px;line-height:24px;}.input-group .ui-select{margin-left:115px;padding:10px 24px 10px 15px;position:relative;}.input-group .select-btn{width:100%;height:24px;line-height:24px;color:#aaa;}.input-group .select-btn span.ui-text{text-align:right;display:inline-block;width:100%;white-space:nowrap;overflow:inherit;text-overflow:ellipsis;pointer-events:none;}.input-group .select-btn span.ui-icon{display:inline-block;position:absolute;top:50%;margin:-10px 0 0 -3px;width:18px;height:20px;right:7px;}.input-group .select-btn span.ui-icon .arrow{width:18px;height:18px;position:relative;display:inline-block;float:right;background:transparent;margin-right:-5px;margin-top:1px;}.input-group .select-btn span.ui-icon .arrow div{background:#ccc;position:absolute;width:3px;height:12px;}.input-group .select-btn span.ui-icon .arrow div.arrow1{left:19px;top:12px;-webkit-transform:rotate(-45deg) translate(0,-142%);}.input-group .select-btn span.ui-icon .arrow div.arrow2{left:-5px;top:19px;-webkit-transform:rotate(45deg) translate(0,-142%);}.seg-words{color:#6d6d72;height:20px;font-size:1em;text-shadow:0 1px #fff;padding:3px 0 6px 14px;}
+                
+         /*border-1px 部分*/
+         .border-1px{
+              position: relative;
+         }
+        .border-1px:before, .border-1px:after{
+            border-top: 1px solid #c8c7cc;
+            content: ' ';
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+        .border-1px:before{
+            top: 0;
+            display: none;
+        }
+        .border-1px:after{
+            bottom: 0;
+        }
+         @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5){
+          .border-1px:after,.border-1px:before{
+              -webkit-transform: scaleY(.7);
+              -webkit-transform-origin: 0 0;
+              transform: scaleY(.7);
+            }
+             .border-1px:after{
+              -webkit-transform-origin: left bottom;
+            }
+        }
+
+        @media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2){
+          .border-1px:after,.border-1px:before{
+              -webkit-transform: scaleY(.5);
+              transform: scaleY(.5);
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="main-section">
+            <p class="seg-words">あ行</p>
+            <!-- あ行 -->
+            <div class="input-group border-1px">
+                <label for="group-class">あ ア</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(a)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px border-1px">
+                <label for="group-class">い イ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(i)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">う ウ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(u)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">え エ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(e)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">お オ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(o)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <!-- か行 -->
+            <p class="seg-words">か行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">か カ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ka)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">き キ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ki)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">く ク</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ku)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">け ケ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ke)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">こ コ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ko)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- さ行 -->
+            <p class="seg-words">さ行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">さ サ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(sa)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">し シ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(shi)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">す ス</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(su)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">せ セ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(se)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">そ ソ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(so)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- た行 -->
+            <p class="seg-words">た行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">た タ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ta)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ち チ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(chi)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">つ ツ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(tsu)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">て テ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(te)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">と ト</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(to)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- な行 -->
+            <p class="seg-words">な行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">な ナ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(na)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">に ニ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ni)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ぬ ヌ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(nu)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ね ネ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ne)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">の ノ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(no)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- は行 -->
+            <p class="seg-words">は行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">は ハ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ha)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ひ ヒ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(hi)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ふ フ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(fu)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">へ ヘ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(he)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ほ ホ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ho)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- ま行 -->
+            <p class="seg-words">ま行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">ま マ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ma)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">み ミ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(mi)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">む ム</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(mu)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">め メ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(me)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">も モ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(mo)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- や行 -->
+            <p class="seg-words">や行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">や ヤ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ya)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">い イ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(i)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ゆ ユ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(yu)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">え エ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(e)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">よ ヨ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(yo)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- ら行 -->
+            <p class="seg-words">ら行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">ら ラ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ra)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">り リ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ri)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">る ル</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ru)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">れ レ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(re)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">ろ ロ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(ro)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- わ行 -->
+            <p class="seg-words">わ行</p>
+            <div class="input-group border-1px">
+                <label for="group-class">わ ワ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(wa)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">い イ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(i)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">う ウ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(u)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">え エ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(e)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+            <div class="input-group border-1px">
+                <label for="group-class">を ヲ</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(wo)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+
+            <!-- ン行 -->
+            <p class="seg-words">ん</p>
+            <div class="input-group border-1px">
+                <label for="group-class">ん ン</label>
+                <div class="ui-select">
+                    <div class="select-btn">
+                        <span class="ui-text">(n)</span>
+                        <span class="ui-icon">
+                            <div class="arrow">
+                                <div class="arrow1"></div>
+                                <div class="arrow2"></div>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="huangwenqiang's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Hexo
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
