@@ -4,6 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[word中如何去掉当前页的水印和修改页码]]></title>
+      <url>http://qiang518.github.io/2017/04/12/word2007/</url>
+      <content type="html"><![CDATA[<h6 id="一、将前3页与后面的页分节，方法如下："><a href="#一、将前3页与后面的页分节，方法如下：" class="headerlink" title="一、将前3页与后面的页分节，方法如下："></a>一、将前3页与后面的页分节，方法如下：</h6><p>先将光标放置在第4页的位置，然后点菜单栏中的“插入”——“分隔符”——再选‘分节符类型’中的“下一页”。这样就将两个要分别设置页码的页分开了，就可以方便下面的操作了。</p>
+<h6 id="二、插入页码，方法如下："><a href="#二、插入页码，方法如下：" class="headerlink" title="二、插入页码，方法如下："></a>二、插入页码，方法如下：</h6><p>1、将光标放置在第4页的位置，然后点菜单栏中的“插入”——“页码”——再选好页码要放置的‘位置’与‘对齐方式’——“格式”——在‘页码编排’中将“起始页码”设置为“1”。这样就将页码插入到文档中了，但还没有去掉前3页的页码，下面就来接着设置。</p>
+<p>2、将光标放置在第4页的位置，然后点菜单栏中的“视图”——“页眉和页脚”让页码处于被编辑状态，在“页眉和页脚”工具栏中取消掉“链接到前一个”，然后将前3页的页码删除掉，再回到文档编辑状态。</p>
+<p><a href="http://wenku.baidu.com/view/f5994b9e6f1aff00bed51ed5.html?qq-pf-to=pcqq.c2c" target="_blank" rel="external">原文</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> word </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://qiang518.github.io/2017/03/31/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
