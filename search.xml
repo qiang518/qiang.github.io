@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title><![CDATA[Android 好文收藏]]></title>
+      <url>http://qiang518.github.io/2017/04/14/collection/</url>
+      <content type="html"><![CDATA[<h3 id="Android-收藏各路大咖的好文"><a href="#Android-收藏各路大咖的好文" class="headerlink" title="Android 收藏各路大咖的好文"></a>Android 收藏各路大咖的好文</h3><blockquote>
+<p> <strong>自定义View系列</strong></p>
+</blockquote>
+<ul>
+<li><a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">从零起步，从入门到懵逼的自定义View教程</a></li>
+<li><a href="http://kingja.github.io/2016/07/31/SwitchButton/" target="_blank" rel="external">自定义View之SwitchButton(切换标签)</a></li>
+<li><a href="http://www.jianshu.com/p/aebc06244487" target="_blank" rel="external">自定义组合控件（标题栏+组合布局</a></li>
+</ul>
+<p>未完待续…</p>
+]]></content>
+      
+        <categories>
+            
+            <category> android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> collection </tag>
+            
+            <tag> android </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[word中如何去掉当前页的水印和修改页码]]></title>
       <url>http://qiang518.github.io/2017/04/12/word2007/</url>
       <content type="html"><![CDATA[<h6 id="一、将前3页与后面的页分节，方法如下："><a href="#一、将前3页与后面的页分节，方法如下：" class="headerlink" title="一、将前3页与后面的页分节，方法如下："></a>一、将前3页与后面的页分节，方法如下：</h6><p>先将光标放置在第4页的位置，然后点菜单栏中的“插入”——“分隔符”——再选‘分节符类型’中的“下一页”。这样就将两个要分别设置页码的页分开了，就可以方便下面的操作了。</p>
@@ -39,26 +70,6 @@
         <tags>
             
             <tag> hello </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[test]]></title>
-      <url>http://qiang518.github.io/2017/03/30/test/</url>
-      <content type="html"></content>
-      
-        <categories>
-            
-            <category> hexo </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> test </tag>
             
         </tags>
         
