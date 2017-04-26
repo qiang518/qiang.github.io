@@ -393,7 +393,42 @@
 <li><a href="http://kingja.github.io/2016/07/31/SwitchButton/" target="_blank" rel="external">自定义View之SwitchButton(切换标签)</a></li>
 <li><a href="http://www.jianshu.com/p/aebc06244487" target="_blank" rel="external">自定义组合控件（标题栏+组合布局)</a></li>
 </ul>
-<p>未完待续…</p>
+<blockquote>
+<p><strong>CoordinatorLayou 实现加载更多</strong></p>
+</blockquote>
+<p> CoordinatorLayout 实现加载更多 需要配合 RecyclerView 使用,<br> 在Adapter 里面监听是否是最后一条数据显示加载更多view。</p>
+<p> <a href="https://segmentfault.com/a/1190000005910053" target="_blank" rel="external">CoordinatorLayout 使用</a></p>
+<pre><code> @Override
+public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    // 创建一个View，简单起见直接使用系统提供的布局，就是一个TextView
+    View view = null;
+    if(viewType == TYPE_NORMAL_ITEM ){
+        view =  View.inflate(viewGroup.getContext(), 
+          android.R.layout.simple_list_item_1, null);
+    }else if(viewType == TYPE_LOAD_MORE){
+        view = View.inflate(viewGroup.getContext(),R.layout.view_load_more,null);
+    }else{
+        view = new View(viewGroup.getContext());
+    }
+    // 创建一个ViewHolder
+    return new ViewHolder(view);
+
+}
+
+
+ private  boolean mLoadmore=false;
+@Override
+public void onBindViewHolder(ViewHolder viewHolder, int position) {
+
+    if(getItemViewType(position) == TYPE_LOAD_MORE ){    // 加载更多
+        //加载更多请求
+        loadMore(viewHolder.getRootView());
+    }else{
+        // 绑定数据到ViewHolder上
+        viewHolder.mTextView.setText(mDataset.get(i));
+    }
+}
+</code></pre><p>未完待续…</p>
 
     
 
