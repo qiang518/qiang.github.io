@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://qiang518.github.io/"/>
-  <updated>2017-04-26T03:23:46.554Z</updated>
+  <updated>2017-04-26T03:26:53.234Z</updated>
   <id>http://qiang518.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://qiang518.github.io/2017/04/14/collection/"/>
     <id>http://qiang518.github.io/2017/04/14/collection/</id>
     <published>2017-04-14T05:21:43.000Z</published>
-    <updated>2017-04-26T03:23:46.554Z</updated>
+    <updated>2017-04-26T03:26:53.234Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Android-收藏各路大咖的好文"><a href="#Android-收藏各路大咖的好文" class="headerlink" title="Android 收藏各路大咖的好文"></a>Android 收藏各路大咖的好文</h3><blockquote>
 <p> <strong>自定义View系列</strong></p>
@@ -35,7 +35,9 @@
 </blockquote>
 <p> CoordinatorLayout 实现加载更多 需要配合 RecyclerView 使用,<br> 在Adapter 里面监听是否是最后一条数据显示加载更多view。</p>
 <p> <a href="https://segmentfault.com/a/1190000005910053" target="_blank" rel="external">CoordinatorLayout 使用</a></p>
-<pre><code> @Override
+<pre><code>// Adapter 部分代码
+
+ @Override
 public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
     // 创建一个View，简单起见直接使用系统提供的布局，就是一个TextView
     View view = null;
