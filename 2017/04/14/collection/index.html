@@ -430,7 +430,23 @@ public void onBindViewHolder(ViewHolder viewHolder, int position) {
         viewHolder.mTextView.setText(mDataset.get(i));
     }
 }
-</code></pre><p>未完待续…</p>
+</code></pre><ul>
+<li><a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="external">BaseRecyclerViewAdapterHelper 没看过</a></li>
+</ul>
+<blockquote>
+<p> <strong>编码规范</strong></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/qiang518/cloudist-coding-style-guide/blob/master/android/README.md" target="_blank" rel="external">Android 编码规范</a></li>
+</ul>
+<blockquote>
+<p><strong>FragmentTabHost的使用</strong></p>
+</blockquote>
+<p>  onAttachedToWindow() 中 ft.commit(); 手机内存不足时，启动程序会报错 重新写ft.commitAllowingStateLoss();</p>
+<ul>
+<li><a href="http://blog.csdn.net/qq_30740239/article/details/52303063" target="_blank" rel="external">FragmentTabHost 重写</a></li>
+</ul>
+<p>未完待续…</p>
 
     
 
@@ -453,6 +469,14 @@ public void onBindViewHolder(ViewHolder viewHolder, int position) {
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017/04/27/android170427/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -552,7 +576,7 @@ public void onBindViewHolder(ViewHolder viewHolder, int position) {
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -570,7 +594,7 @@ public void onBindViewHolder(ViewHolder viewHolder, int position) {
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         

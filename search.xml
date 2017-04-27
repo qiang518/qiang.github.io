@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title><![CDATA[ScrollView + GridView 滑动冲突]]></title>
+      <url>http://qiang518.github.io/2017/04/27/android170427/</url>
+      <content type="html"><![CDATA[<p>ScrollView + GridView 解决滑动冲突 ，ScrollView，GridView各自滑动不冲突</p>
+<h2 id="ScrollView-GridView-滑动冲突"><a href="#ScrollView-GridView-滑动冲突" class="headerlink" title="ScrollView + GridView 滑动冲突"></a>ScrollView + GridView 滑动冲突</h2><p>####关键代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">mGridView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() &#123;</div><div class="line">         <span class="meta">@Override</span></div><div class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">             ViewParent parent1 = mGridView.getParent();</div><div class="line">             parent1.requestDisallowInterceptTouchEvent(isScroll); </div><div class="line">	<span class="comment">//不允许父类截断</span></div><div class="line">             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">         &#125;</div><div class="line">     &#125;);</div></pre></td></tr></table></figure>
+<h4 id="部分代码"><a href="#部分代码" class="headerlink" title="部分代码"></a>部分代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">private</span> ScrollView mScrollView;</div><div class="line">   <span class="keyword">private</span> GridView mGridView;</div><div class="line">   </div><div class="line">   <span class="keyword">private</span> <span class="keyword">boolean</span> isScroll=<span class="keyword">true</span>;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">       setContentView(R.layout.activity_main);</div><div class="line">      mScrollView= (ScrollView) findViewById(R.id.scrollView);</div><div class="line">      mGridView= (GridView) findViewById(R.id.grid_view);</div><div class="line">       mGridView.setAdapter(<span class="keyword">new</span>  GridAdapter());</div><div class="line"></div><div class="line">       mScrollView.getViewTreeObserver().addOnScrollChangedListener(<span class="keyword">new</span> </div><div class="line">	ViewTreeObserver.OnScrollChangedListener() &#123;</div><div class="line">           <span class="keyword">int</span> oldY=<span class="number">0</span>;</div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScrollChanged</span><span class="params">()</span> </span>&#123;</div><div class="line">               <span class="keyword">int</span> scrollY=mScrollView.getScrollY();<span class="comment">//顶端以及滑出去的距离</span></div><div class="line">               <span class="keyword">int</span> height=mScrollView.getHeight();<span class="comment">//界面的高度</span></div><div class="line">               <span class="keyword">int</span> scrollViewMeasuredHeight=mScrollView.getChildAt</div><div class="line">				(<span class="number">0</span>).getMeasuredHeight();<span class="comment">//scrollview所占的高度</span></div><div class="line"></div><div class="line">               <span class="keyword">if</span>(scrollY==<span class="number">0</span>)&#123;<span class="comment">//在顶端的时候</span></div><div class="line">                   isScroll=<span class="keyword">true</span>;  <span class="comment">//不允许父类截断</span></div><div class="line">               &#125;<span class="keyword">else</span> <span class="keyword">if</span>((scrollY+height)==scrollViewMeasuredHeight)&#123;</div><div class="line">		<span class="comment">//当在底部的时候</span></div><div class="line">                   isScroll=<span class="keyword">true</span>; <span class="comment">//不允许父类截断</span></div><div class="line">               &#125;<span class="keyword">else</span> &#123;<span class="comment">//当在中间的时候</span></div><div class="line"></div><div class="line">                   <span class="comment">//GridView 在底部或顶部的时候 父类截断</span></div><div class="line">                   <span class="keyword">if</span>(isTop(mGridView) || isBottom(mGridView))&#123;</div><div class="line">                       isScroll=<span class="keyword">false</span>;  <span class="comment">//父类截断</span></div><div class="line">                   &#125;<span class="keyword">else</span> &#123;</div><div class="line">                       isScroll=<span class="keyword">true</span>; <span class="comment">//不允许父类截断</span></div><div class="line">                   &#125;</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line">       mGridView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() &#123;</div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">               ViewParent parent1 = mGridView.getParent();</div><div class="line">               parent1.requestDisallowInterceptTouchEvent(isScroll); </div><div class="line">			<span class="comment">//不允许父类截断</span></div><div class="line">               <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line">       mGridView.setOnScrollListener(<span class="keyword">new</span> AbsListView.OnScrollListener() &#123;</div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScrollStateChanged</span><span class="params">(AbsListView view, <span class="keyword">int</span> scrollState)</span> </span>&#123;</div><div class="line">               <span class="keyword">if</span>(isBottom(mGridView)||isTop(mGridView))&#123;</div><div class="line">                   isScroll=<span class="keyword">false</span>;</div><div class="line">               &#125;<span class="keyword">else</span> &#123;</div><div class="line">                   isScroll=<span class="keyword">true</span>;</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScroll</span><span class="params">(AbsListView view, <span class="keyword">int</span> firstVisibleItem, </span></span></div><div class="line">		<span class="keyword">int</span> visibleItemCount, <span class="keyword">int</span> totalItemCount) &#123;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> android </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ScrollView </tag>
+            
+            <tag> GridView </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android 好文收藏]]></title>
       <url>http://qiang518.github.io/2017/04/14/collection/</url>
       <content type="html"><![CDATA[<h3 id="Android-收藏各路大咖的好文"><a href="#Android-收藏各路大咖的好文" class="headerlink" title="Android 收藏各路大咖的好文"></a>Android 收藏各路大咖的好文</h3><blockquote>
@@ -51,7 +77,23 @@ public void onBindViewHolder(ViewHolder viewHolder, int position) {
         viewHolder.mTextView.setText(mDataset.get(i));
     }
 }
-</code></pre><p>未完待续…</p>
+</code></pre><ul>
+<li><a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="external">BaseRecyclerViewAdapterHelper 没看过</a></li>
+</ul>
+<blockquote>
+<p> <strong>编码规范</strong></p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/qiang518/cloudist-coding-style-guide/blob/master/android/README.md" target="_blank" rel="external">Android 编码规范</a></li>
+</ul>
+<blockquote>
+<p><strong>FragmentTabHost的使用</strong></p>
+</blockquote>
+<p>  onAttachedToWindow() 中 ft.commit(); 手机内存不足时，启动程序会报错 重新写ft.commitAllowingStateLoss();</p>
+<ul>
+<li><a href="http://blog.csdn.net/qq_30740239/article/details/52303063" target="_blank" rel="external">FragmentTabHost 重写</a></li>
+</ul>
+<p>未完待续…</p>
 ]]></content>
       
         <categories>

@@ -10,6 +10,8 @@
     
     <title>
         
+            ScrollView + GridView 滑动冲突 | 
+        
         Lingu&#39;s Blog
     </title>
 
@@ -25,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Lingu">
     <meta name="description" content="null">
-    <meta name="keywords" content="hexo">
+    <meta name="keywords" content="hexo,ScrollView,GridView">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -46,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://qiang518.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Lingu&#39;s Blog">
+    <meta property="og:title" content="ScrollView + GridView 滑动冲突 | Lingu&#39;s Blog">
     <meta property="og:description" content="null">
-    
+    <meta property="og:article:tag" content="ScrollView"> <meta property="og:article:tag" content="GridView"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -208,6 +210,41 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ScrollView-GridView-滑动冲突"><span class="post-toc-number">1.</span> <span class="post-toc-text">ScrollView + GridView 滑动冲突</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#部分代码"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">部分代码</span></a></li></ol></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
 
 <!-- Layouts -->
 
@@ -233,7 +270,7 @@
         
     
             <p class="article-headline-p">
-                
+                ScrollView + GridView 滑动冲突
             </p>
         </div>
 
@@ -252,7 +289,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Lingu</strong>
-        <span>3月 31, 2017</span>
+        <span>4月 27, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -276,7 +313,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/GridView/">GridView</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/ScrollView/">ScrollView</a>
     </ul>
     
 
@@ -303,7 +340,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://qiang518.github.io//assets/demo/jiugongge_demo.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ScrollView + GridView 滑动冲突&url=http://qiang518.github.io//2017/04/27/android170427/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -318,7 +355,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://qiang518.github.io//assets/demo/jiugongge_demo.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://qiang518.github.io//2017/04/27/android170427/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -330,7 +367,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Lingu&#39;s Blog&title=&summary=null&pics=http://qiang518.github.io/img/favicon.png&url=http://qiang518.github.io/assets/demo/jiugongge_demo.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Lingu&#39;s Blog&title=ScrollView + GridView 滑动冲突&summary=null&pics=http://qiang518.github.io/img/favicon.png&url=http://qiang518.github.io/2017/04/27/android170427/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -348,159 +385,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>jiugongge_demo</title>
-	<style>
-		*{
-			margin:0;
-			padding: 0;
-		}
-		table{
-			margin: 30px;
-			border-collapse: collapse;
-		}
-		#test0{
-			margin: 30px;
-			width: 200px;
-			height: 200px;
-		}
-		#test0 div{
-			width: 50px;
-			height: 50px;
-			float: left;
-			background: #eee;
-			border: 5px solid #00f;
-			text-align: center;
-			line-height: 50px;
-			color: #090;
-			position: relative;
-		}
-		#test0 .lr_indent{
-			margin-left: -5px;
-			margin-right: -5px;
-		}
-		#test0 .tb_indent{
-			margin-top: -5px;
-			margin-bottom: -5px;
-		}
-		#test0 div:hover{
-			border: 5px solid #f00;
-			z-index: 999;
-			background: #eee;
-		}
-		#test1 td{
-			width: 50px;
-			height: 50px;
-			background: #eee;
-			position: relative;
-			border: 5px solid #00f;
-			text-align: center;
-		}
-		#test1 td span{
-			color: #090;
-			display:block;
-			width: 50px;
-			height: 50px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			line-height: 50px;
-		}
-		#test1 td span:hover{
-			border: 5px solid #f00;
-			margin-top:-5px;
-			margin-left: -5px;
-		}
+        <p>ScrollView + GridView 解决滑动冲突 ，ScrollView，GridView各自滑动不冲突</p>
+<h2 id="ScrollView-GridView-滑动冲突"><a href="#ScrollView-GridView-滑动冲突" class="headerlink" title="ScrollView + GridView 滑动冲突"></a>ScrollView + GridView 滑动冲突</h2><p>####关键代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">mGridView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() &#123;</div><div class="line">         <span class="meta">@Override</span></div><div class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">             ViewParent parent1 = mGridView.getParent();</div><div class="line">             parent1.requestDisallowInterceptTouchEvent(isScroll); </div><div class="line">	<span class="comment">//不允许父类截断</span></div><div class="line">             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">         &#125;</div><div class="line">     &#125;);</div></pre></td></tr></table></figure>
+<h4 id="部分代码"><a href="#部分代码" class="headerlink" title="部分代码"></a>部分代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">private</span> ScrollView mScrollView;</div><div class="line">   <span class="keyword">private</span> GridView mGridView;</div><div class="line">   </div><div class="line">   <span class="keyword">private</span> <span class="keyword">boolean</span> isScroll=<span class="keyword">true</span>;</div><div class="line"></div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">       <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">       setContentView(R.layout.activity_main);</div><div class="line">      mScrollView= (ScrollView) findViewById(R.id.scrollView);</div><div class="line">      mGridView= (GridView) findViewById(R.id.grid_view);</div><div class="line">       mGridView.setAdapter(<span class="keyword">new</span>  GridAdapter());</div><div class="line"></div><div class="line">       mScrollView.getViewTreeObserver().addOnScrollChangedListener(<span class="keyword">new</span> </div><div class="line">	ViewTreeObserver.OnScrollChangedListener() &#123;</div><div class="line">           <span class="keyword">int</span> oldY=<span class="number">0</span>;</div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScrollChanged</span><span class="params">()</span> </span>&#123;</div><div class="line">               <span class="keyword">int</span> scrollY=mScrollView.getScrollY();<span class="comment">//顶端以及滑出去的距离</span></div><div class="line">               <span class="keyword">int</span> height=mScrollView.getHeight();<span class="comment">//界面的高度</span></div><div class="line">               <span class="keyword">int</span> scrollViewMeasuredHeight=mScrollView.getChildAt</div><div class="line">				(<span class="number">0</span>).getMeasuredHeight();<span class="comment">//scrollview所占的高度</span></div><div class="line"></div><div class="line">               <span class="keyword">if</span>(scrollY==<span class="number">0</span>)&#123;<span class="comment">//在顶端的时候</span></div><div class="line">                   isScroll=<span class="keyword">true</span>;  <span class="comment">//不允许父类截断</span></div><div class="line">               &#125;<span class="keyword">else</span> <span class="keyword">if</span>((scrollY+height)==scrollViewMeasuredHeight)&#123;</div><div class="line">		<span class="comment">//当在底部的时候</span></div><div class="line">                   isScroll=<span class="keyword">true</span>; <span class="comment">//不允许父类截断</span></div><div class="line">               &#125;<span class="keyword">else</span> &#123;<span class="comment">//当在中间的时候</span></div><div class="line"></div><div class="line">                   <span class="comment">//GridView 在底部或顶部的时候 父类截断</span></div><div class="line">                   <span class="keyword">if</span>(isTop(mGridView) || isBottom(mGridView))&#123;</div><div class="line">                       isScroll=<span class="keyword">false</span>;  <span class="comment">//父类截断</span></div><div class="line">                   &#125;<span class="keyword">else</span> &#123;</div><div class="line">                       isScroll=<span class="keyword">true</span>; <span class="comment">//不允许父类截断</span></div><div class="line">                   &#125;</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line">       mGridView.setOnTouchListener(<span class="keyword">new</span> View.OnTouchListener() &#123;</div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">               ViewParent parent1 = mGridView.getParent();</div><div class="line">               parent1.requestDisallowInterceptTouchEvent(isScroll); </div><div class="line">			<span class="comment">//不允许父类截断</span></div><div class="line">               <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line">       mGridView.setOnScrollListener(<span class="keyword">new</span> AbsListView.OnScrollListener() &#123;</div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScrollStateChanged</span><span class="params">(AbsListView view, <span class="keyword">int</span> scrollState)</span> </span>&#123;</div><div class="line">               <span class="keyword">if</span>(isBottom(mGridView)||isTop(mGridView))&#123;</div><div class="line">                   isScroll=<span class="keyword">false</span>;</div><div class="line">               &#125;<span class="keyword">else</span> &#123;</div><div class="line">                   isScroll=<span class="keyword">true</span>;</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line"></div><div class="line">           <span class="meta">@Override</span></div><div class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onScroll</span><span class="params">(AbsListView view, <span class="keyword">int</span> firstVisibleItem, </span></span></div><div class="line">		<span class="keyword">int</span> visibleItemCount, <span class="keyword">int</span> totalItemCount) &#123;</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line"></div><div class="line"></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 
-		#test2 td{
-			width: 50px;
-			height: 50px;
-			background: #eee;
-			border: 5px solid #00f;
-			text-align: center;
-			vertical-align: top;
-		}
-		#test2 td div{
-			position:relative;
-			width: 50px;
-			height: 50px;
-		}
-		#test2 td div span{
-			color: #090;
-			display:block;
-			width: 50px;
-			height: 50px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			line-height: 50px;
-		}
-		#test2 td div span:hover{
-			border: 5px solid #f00;
-			margin-left: -5px;
-			margin-top: -5px;
-		}
-	</style>
-</head>
-<body>
-	<h2>1) div+负margin实现</h2>
-	<div id="test0">
-		<div>1</div>
-		<div class="lr_indent">2</div>
-		<div>3</div>
-		<div class="tb_indent">4</div>
-		<div class="lr_indent tb_indent">5</div>
-		<div class="tb_indent">6</div>
-		<div>7</div>
-		<div class="lr_indent">8</div>
-		<div>9</div>
-	</div>
-	<h2>2.1) table border-collapse: collapse实现</h2>
-	<div id="test1">
-		<table>
-			<tr>
-				<td><span>1</span></td>
-				<td><span>2</span></td>
-				<td><span>3</span></td>
-			</tr>
-			<tr>
-				<td><span>4</span></td>
-				<td><span>5</span></td>
-				<td><span>6</span></td>
-			</tr>
-			<tr>
-				<td><span>7</span></td>
-				<td><span>8</span></td>
-				<td><span>9</span></td>
-			</tr>
-		</table>
-	</div>
-	<h2>2.2) table思路改进</h2>
-	<div id="test2">
-		<table>
-			<tr>
-				<td><div><span>1</span></div></td>
-				<td><div><span>2</span></div></td>
-				<td><div><span>3</span></div></td>
-			</tr>
-			<tr>
-				<td><div><span>4</span></div></td>
-				<td><div><span>5</span></div></td>
-				<td><div><span>6</span></div></td>
-			</tr>
-			<tr>
-				<td><div><span>7</span></div></td>
-				<td><div><span>8</span></div></td>
-				<td><div><span>9</span></div></td>
-			</tr>
-		</table>
-	</div>
-</body>
-</html>
     
 
     
@@ -528,6 +417,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/04/14/collection/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -732,6 +629,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
