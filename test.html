@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  Hello World
+ </body>
+
+ <script LANGUAGE="javascript"> 
+
+//创建一个隐藏的iframe
+var ifr = document.createElement('iframe');
+ifr.src = 'taocan://';
+ifr.style.display = 'none';
+document.body.appendChild(ifr);
+//记录唤醒时间
+var openTime = +new Date();
+window.setTimeout(function(){
+    document.body.removeChild(ifr);
+    //如果setTimeout 回调超过2500ms，则弹出下载
+    if( (+new Date()) - openTime > 2500 ){
+        window.location = 'https://client.woying.com/android/woying_2.82.apk';
+    }
+},2000)
+
+</script> 
+</html>
