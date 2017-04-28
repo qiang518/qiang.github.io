@@ -39,6 +39,7 @@
 <li><a href="https://github.com/GcsSloop/AndroidNote/tree/master/CustomView" target="_blank" rel="external">从零起步，从入门到懵逼的自定义View教程</a></li>
 <li><a href="http://kingja.github.io/2016/07/31/SwitchButton/" target="_blank" rel="external">自定义View之SwitchButton(切换标签)</a></li>
 <li><a href="http://www.jianshu.com/p/aebc06244487" target="_blank" rel="external">自定义组合控件（标题栏+组合布局)</a></li>
+<li><a href="http://xdeveloper.cn/zhuan-zai-tu-jie-android-shi-jian-fen-fa-ji-zhi/" target="_blank" rel="external">[转] 图解 Android 事件分发机制</a></li>
 </ul>
 <blockquote>
 <p><strong>CoordinatorLayou 实现加载更多</strong></p>
@@ -79,6 +80,9 @@ public void onBindViewHolder(ViewHolder viewHolder, int position) {
 }
 </code></pre><ul>
 <li><a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="external">BaseRecyclerViewAdapterHelper 没看过</a></li>
+</ul>
+<ul>
+<li>这个Fragment能够自动处理下拉刷新和上拉加载下一页的逻辑。 只需要设置数据源和adapter就能开始工作。支持横向和竖向滑动。支持第三方下拉刷新框架。具有高度的定制性<br><a href="https://github.com/CymChad/BaseRecyclerViewAdapterHelper" target="_blank" rel="external">GeneralRecyclerViewFragment</a></li>
 </ul>
 <blockquote>
 <p> <strong>编码规范</strong></p>
