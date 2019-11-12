@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>边检首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="./css/base.css">
+		<script src="./js/flexible.js"></script>
+		<link rel="stylesheet" media="screen and (max-device-width:639px)" href="./css/index_mobile.css?v=1.0"/>
+		<link rel="stylesheet" media="screen and (min-device-width:640px)" href="./css/index.css?v=1.0">
+	</head>
+	<body>
+			<div class="immigration-container">
+				<div class="header">
+					<div class="tit-icon">
+						<img src="./img/logo.png" alt="">
+					</div>
+					<div class="tit">
+						<p class="main">出入境智能语言服务系统</p>
+						<p class="sub">Frontier Inspection Intelligent Language Service System</p>
+					</div>
+				</div>
+				<div class="feature-container">
+					<div class="feature-content">
+						<ul class="feature dis-flex flex-space-between-x">
+							<li class="inquery bg-inquery">
+								<a href="biz://androidhome?data={'module_type':''3','action':'com.dosmono.hnsh.test.splash','action_name':'检查询问'}">
+									<div class="fea-icon">
+										<img src="./img/inquery.png" alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch">检查询问</p>
+										<p class="en">Inspection Inquery</p>
+									</div>
+								</a>
+							</li>
+							<li class="dialogue bg-dialogue">
+								<a href="biz://androidhome?data={'module_type':'0','action':'dialogue','action_name':'对话翻译'}">
+									<div class="fea-icon">
+										<img src="./img/translation.png" alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch">对话翻译</p>
+										<p class="en">Dialogue Translation</p>
+									</div>
+								</a>
+							</li>
+							<li class="video bg-video">
+								<a href="biz://androidhome?data={'module_type':'0','action':'video','action_name':'广告视频'}">
+									<div class="fea-icon">
+										<img src="./img/video.png" alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch">广告视频</p>
+										<p class="en">Advertising Video</p>
+									</div>
+								</a>
+							</li>
+							<li class="weather bg-weather">
+								<a href="javascript:;">
+									<div class="fea-icon">
+										<img class="weather" id="weatherIcon" src="./img/weather/yun.png" alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch climate"><span class="temperature">22℃</span><span class="weather-text">晴转多云</span></p>
+										<p class="en" id="city">三亚</p>
+									</div>
+								</a>
+							</li>
+							<li class="picture bg-picture">
+								<a href="biz://androidhome?data={'module_type':'0','action':'picture','action_name':'图片轮播'}">
+									<div class="fea-icon">
+										<img src="./img/picture.png" alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch">图片轮播</p>
+										<p class="en">Picture Rotation <span id="dpr"></span></p>
+									</div>
+								</a>
+							</li>
+							<li class="setting bg-setting">
+								<a href="biz://androidhome?data={'module_type':'0','action':'setting','action_name':'设置'}">
+									<div class="fea-icon">
+										<img src="./img/setting.png"alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch">设置</p>
+										<p class="en">Setting Up</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="feature-content">
+						<ul class="feature dis-flex flex-space-between-x">
+							<li class="inquery bg-inquery">
+								<a href="biz://androidhome?data={'module_type':''3','action':'com.dosmono.hnsh.test.splash','action_name':'检查询问'}">
+									<div class="fea-icon">
+										<img src="./img/inquery.png" alt="">
+									</div>
+									<div class="fea-tit">
+										<p class="ch">检查询问</p>
+										<p class="en">Inspection Inquery</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+	</body>
+	<script src="./js/jquery-2.1.4.js"></script>
+	<script src="./js/util.js?v=1.0"></script>
+	<script type="text/javascript">
+		function getCityWeather(json) {
+			$("#city").html(json.city)
+			$(".temperature").html(json.temperature)
+			$(".weather-text").html(json.wea)
+			$("#weatherIcon").attr('src', './img/weather/'+ json.weaImg + '.png')
+		}
+		
+		function getCity() {
+			alert('无参的方法')
+		}
+	</script>
+</html>

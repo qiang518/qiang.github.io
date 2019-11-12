@@ -305,12 +305,6 @@
                         友情链接
                     </li>
                 </a>
-
-				 <a class="index_share-link" href="/home_m" title="首页模块">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        首页模块
-                    </li>
-                </a>
             
         </ul>
 
